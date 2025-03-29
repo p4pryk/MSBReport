@@ -1,0 +1,728 @@
+/* Azure-inspired color palette */
+:root {
+  --azure-blue: #0078d4;
+  --azure-blue-dark: #106ebe;
+  --azure-blue-light: #deecf9;
+  --azure-gray-dark: #323130;
+  --azure-gray: #8a8886;
+  --azure-gray-light: #f3f2f1;
+  --azure-success: #107c10;
+  --azure-warning: #ffb900;
+  --azure-error: #e81123;
+  --azure-white: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  
+  /* Nowe kolory w stylu Fluent UI */
+  --fluent-primary: #0078d4;
+  --fluent-primary-dark: #005a9e;
+  --fluent-primary-light: #c7e0f4;
+  --fluent-secondary: #2b88d8;
+  --fluent-background: #faf9f8;
+  --fluent-surface: #ffffff;
+  --fluent-border: #edebe9;
+  --fluent-text: #323130;
+  --fluent-text-secondary: #605e5c;
+  --fluent-success: #107c10;
+  --fluent-warning: #ffb900; 
+  --fluent-error: #d13438;
+  --fluent-shadow-light: 0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108);
+  --fluent-shadow: 0 6.4px 14.4px 0 rgba(0,0,0,.132), 0 1.2px 3.6px 0 rgba(0,0,0,.108);
+}
+
+/* Global page styling */
+.main .block-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 1400px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--azure-gray-dark);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem !important;
+  border-bottom: 1px solid var(--azure-gray-light);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- NOWY FLUENT UI STYLE ---- */
+/* Główny interfejs aplikacji z nowoczesnym designem */
+.stApp {
+  background-color: var(--fluent-background);
+}
+
+/* Nagłówek aplikacji w stylu Fluent UI */
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--fluent-surface);
+  border-radius: 8px;
+  box-shadow: var(--fluent-shadow-light);
+}
+
+.main-header img {
+  height: 36px;
+  margin-right: 1rem;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.5rem !important;
+  color: var(--fluent-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Karty w stylu Fluent UI */
+.fluent-card {
+  background-color: var(--fluent-surface);
+  border-radius: 8px;
+  box-shadow: var(--fluent-shadow-light);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.fluent-card:hover {
+  box-shadow: var(--fluent-shadow);
+}
+
+.fluent-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.fluent-card-header .icon {
+  background-color: var(--fluent-primary-light);
+  color: var(--fluent-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fluent-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--fluent-primary-dark);
+  margin: 0;
+}
+
+.fluent-card-content {
+  color: var(--fluent-text-secondary);
+}
+
+/* Metryki w stylu Fluent UI */
+.fluent-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fluent-metric-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--fluent-surface);
+  border-radius: 8px;
+  box-shadow: var(--fluent-shadow-light);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.fluent-metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fluent-shadow);
+}
+
+.fluent-metric-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.fluent-metric-label {
+  font-size: 0.9rem;
+  color: var(--fluent-text-secondary);
+}
+
+/* Przyciski w stylu Fluent UI */
+.fluent-button {
+  background-color: var(--fluent-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fluent-button:hover {
+  background-color: var(--fluent-primary-dark);
+}
+
+.fluent-button.secondary {
+  background-color: white;
+  color: var(--fluent-primary);
+  border: 1px solid var(--fluent-primary);
+}
+
+.fluent-button.secondary:hover {
+  background-color: var(--fluent-primary-light);
+}
+
+/* Tabele w stylu Fluent UI */
+.fluent-table-container {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--fluent-shadow-light);
+  border: 1px solid var(--fluent-border);
+}
+
+.fluent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fluent-table th {
+  background-color: var(--fluent-primary);
+  color: white;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.fluent-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--fluent-border);
+}
+
+.fluent-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.fluent-table tr:hover {
+  background-color: var(--fluent-primary-light);
+}
+
+/* Zakładki w stylu Fluent UI */
+.fluent-tabs {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--fluent-border);
+}
+
+.fluent-tab {
+  padding: 0.75rem 1.5rem;
+  margin-right: 0.25rem;
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: var(--fluent-text-secondary);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.fluent-tab.active {
+  color: var(--fluent-primary);
+  border-bottom: 2px solid var(--fluent-primary);
+}
+
+/* Panele rozwijane w stylu Fluent UI */
+.fluent-expander {
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--fluent-border);
+  border-radius: 4px;
+}
+
+.fluent-expander-header {
+  padding: 0.75rem 1rem;
+  background-color: var(--fluent-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fluent-expander-title {
+  font-weight: 600;
+  color: var(--fluent-text);
+}
+
+.fluent-expander-content {
+  padding: 1rem;
+  border-top: 1px solid var(--fluent-border);
+}
+
+/* Powiadomienia w stylu Fluent UI */
+.fluent-alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.fluent-alert-icon {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+}
+
+.fluent-alert-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.fluent-alert-info {
+  background-color: #f0f6ff;
+  border-left: 4px solid var(--fluent-primary);
+}
+
+.fluent-alert-success {
+  background-color: #dff6dd;
+  border-left: 4px solid var(--fluent-success);
+}
+
+.fluent-alert-warning {
+  background-color: #fff4ce;
+  border-left: 4px solid var(--fluent-warning);
+}
+
+.fluent-alert-error {
+  background-color: #fed9cc;
+  border-left: 4px solid var(--fluent-error);
+}
+
+/* Azure branded header */
+.stApp header {
+  background-color: var(--azure-blue);
+  color: white;
+}
+
+/* Sidebar styling */
+.css-1d391kg, .css-12oz5g7 {
+  background-color: var(--azure-white);
+  border-right: 1px solid var(--azure-gray-light);
+}
+
+.sidebar .sidebar-content {
+  background-color: var(--azure-white);
+}
+
+/* Improved sidebar header styling */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--azure-blue-light);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.sidebar-header img {
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-header span {
+  font-weight: 600;
+  color: var(--azure-blue);
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+/* Sidebar description styling */
+.sidebar-description {
+  background-color: var(--azure-gray-light);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--azure-gray-dark);
+  line-height: 1.5;
+  border-left: 3px solid var(--azure-blue);
+}
+
+.sidebar-description p {
+  margin: 0 0 0.5rem 0;
+}
+
+.sidebar-description .app-version {
+  font-size: 0.8rem;
+  color: var(--azure-gray);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Hide login status indicators */
+.login-status-success, .login-status-warning {
+  display: none;
+}
+
+/* Status icon styling (keeping for other potential uses) */
+.status-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* Sidebar footer styling */
+.sidebar-footer {
+  color: var(--azure-gray);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.sidebar h2 {
+  color: var(--azure-blue);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--azure-gray-light);
+  padding-bottom: 0.5rem;
+}
+
+/* Input fields styling */
+div[data-baseweb="input"] input,
+div[data-baseweb="textarea"] textarea,
+div[data-baseweb="select"] div {
+  border-radius: 4px !important;
+  border-color: var(--azure-gray);
+}
+
+div[data-baseweb="input"] input:focus,
+div[data-baseweb="textarea"] textarea:focus,
+div[data-baseweb="select"] div:focus {
+  border-color: var(--azure-blue) !important;
+  box-shadow: 0 0 0 1px var(--azure-blue-light) !important;
+}
+
+/* Button styling */
+.stButton > button {
+  background-color: var(--azure-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+  background-color: var(--azure-blue-dark);
+  box-shadow: 0 4px 8px rgba(0, 120, 212, 0.2);
+}
+
+.stButton > button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--azure-blue-light);
+}
+
+/* Fix for button active state */
+.stButton > button:active {
+  background-color: var(--azure-blue-dark) !important;
+  color: white !important;
+  transform: translateY(1px);
+}
+
+/* Status colors */
+.status-healthy {
+  color: var(--azure-success);
+  font-weight: 600;
+}
+
+.status-unhealthy {
+  color: var(--azure-error);
+  font-weight: 600;
+}
+
+/* Card component styling */
+.card {
+  background-color: var(--azure-white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  color: var(--azure-blue);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--azure-gray-light);
+  padding-bottom: 0.75rem;
+}
+
+/* Dashboard metrics styling */
+.metric-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--azure-white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.metric-label {
+  color: var(--azure-gray);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Severity indicators */
+.severity-high {
+  color: var(--azure-error);
+  font-weight: 600;
+}
+
+.severity-medium {
+  color: var(--azure-warning);
+  font-weight: 600;
+}
+
+.severity-low {
+  color: var(--azure-blue);
+  font-weight: 600;
+}
+
+/* Dataframe styling */
+.dataframe-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  max-height: 600px;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+  border: 1px solid var(--azure-gray-light);
+}
+
+.dataframe {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  box-shadow: var(--box-shadow);
+}
+
+.dataframe th {
+  background-color: var(--azure-blue);
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.dataframe td {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--azure-gray-light);
+}
+
+.dataframe tr:nth-child(even) {
+  background-color: rgba(0, 120, 212, 0.03);
+}
+
+.dataframe tr:hover {
+  background-color: rgba(0, 120, 212, 0.08);
+}
+
+/* Tabs styling - zaktualizowane selektory */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+  border-radius: 4px 4px 0px 0px;
+  padding: 10px 16px;
+  background-color: transparent !important;
+  color: var(--azure-gray-dark) !important;
+  transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+  background-color: var(--azure-blue-light) !important;
+  color: var(--azure-blue-dark) !important;
+  border-color: var(--azure-blue-light) !important;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  background-color: var(--azure-blue) !important;
+  color: white !important;
+  border-bottom-color: var(--azure-blue) !important;
+}
+
+/* Fix for tabs hover state */
+.stTabs [data-baseweb="tab"]:hover {
+  background-color: var(--azure-blue-light) !important;
+  color: var(--azure-blue-dark) !important;
+}
+
+/* Override dla zakładek z większą specyficznością */
+div.stTabs div[data-baseweb="tab-list"] button[data-baseweb="tab"]:hover {
+  background-color: var(--azure-blue-light) !important;
+  color: var(--azure-blue-dark) !important;
+  border-color: var(--azure-blue-light) !important;
+}
+
+div.stTabs div[data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] {
+  background-color: var(--azure-blue) !important;
+  color: white !important;
+  border-color: var(--azure-blue) !important;
+}
+
+/* Loading spinner */
+.stSpinner {
+  text-align: center;
+  color: var(--azure-blue);
+}
+
+/* Info/Warning/Error boxes */
+.info-box, .warning-box, .error-box, .success-box {
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.info-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--azure-blue-light);
+  border-left: 4px solid var(--azure-blue);
+  margin-bottom: 1.5rem;
+}
+
+.info-box h3 {
+  color: var(--azure-blue);
+  margin-top: 0;
+}
+
+.info-box ul {
+  margin-left: 1.5rem;
+}
+
+.warning-box {
+  background-color: rgba(255, 185, 0, 0.1);
+  border-left: 4px solid var(--azure-warning);
+}
+
+.error-box {
+  background-color: rgba(232, 17, 35, 0.1);
+  border-left: 4px solid var(--azure-error);
+}
+
+.success-box {
+  background-color: rgba(16, 124, 16, 0.1);
+  border-left: 4px solid var(--azure-success);
+}
+
+/* Tab-style buttons for "Generate report" and "Logout" - Added simple styling */
+button:contains("Generate report"),
+button:contains("Logout") {
+  background-color: transparent !important;
+  color: var(--azure-gray-dark) !important;
+  border: none !important;
+  border-radius: 4px 4px 0 0 !important;
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+button:contains("Generate report"):hover,
+button:contains("Logout"):hover {
+  background-color: var(--azure-blue-light) !important;
+  color: var(--azure-blue-dark) !important;
+}
+
+button:contains("Generate report"):active,
+button:contains("Logout"):active {
+  background-color: var(--azure-blue) !important;
+  color: white !important;
+  transform: none !important;
+}
+
+/* Reset button style overrides */
+.stButton > button {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Reset conflicting styles - MODIFIED TO FIX RED TEXT */
+.stButton > button:hover {
+  background-color: var(--azure-blue-light);
+  color: var(--azure-blue-dark);
+}
+
+.stButton > button:active,
+.stButton > button:focus:active {
+  background-color: var(--azure-blue) !important;
+  color: white !important;
+}
+
+/* Added this new rule to ensure text stays white in all click states */
+button:active,
+button:focus:active {
+  color: white !important;
+}
+
+/* Add stronger button state selectors to prevent red text */
+.stButton > button,
+.stButton > button:visited,
+.stButton > button:hover,
+.stButton > button:active,
+.stButton > button:focus {
+  color: white !important;
+}
+
+/* Specific rule for standard buttons in active state */
+button.stButton:active > button:active,
+button:active,
+.stButton > button:active {
+  color: white !important;
+  background-color: var(--azure-blue-dark) !important;
+}
+
+/* Additional selector for webkit browsers */
+.stButton button:-webkit-any-link:active {
+  color: white !important;
+}
